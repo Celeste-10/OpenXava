@@ -1,0 +1,4 @@
+/*C6*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C7*/SET SCHEMA PUBLIC
+create table Producto (numero integer not null, descripcion varchar(100), primary key (numero))
