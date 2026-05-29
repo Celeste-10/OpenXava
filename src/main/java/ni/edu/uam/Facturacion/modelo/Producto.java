@@ -2,11 +2,10 @@ package ni.edu.uam.Facturacion.modelo;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.openxava.annotations.Required;
+import org.openxava.annotations.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Getter
@@ -21,5 +20,19 @@ public class Producto {
     @Required
     String descripcion;
 
+    @ManyToOne
+            (fetch = FetchType.LAZY, optional = true)
+    @DescriptionsList
+    Categoria categoria;
+
+    @Money
+    BigDecimal precio;
+
+    @Files
+    @Column(length = 32)
+    String fotos;
+
+    @TextArea
+    String observaciones;
 }
 
