@@ -21,13 +21,14 @@
 			<artifactId>openxava</artifactId>
 			<version>${openxava.version}</version>
 
-			<dependency>
-				<groupId>org.postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<version>42.7.11</version>
-			</dependency>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.11</version>
+		</dependency>
+
 		<!-- Funcionalidad de Chat IA (requiere Java 17) -->
 		<dependency>
 			<groupId>org.openxava</groupId>
